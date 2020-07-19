@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;600:800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"
+      integrity="sha256-3mBEX8I0uMLF7+AUjJeTCelosuorzYpqwBMBPDTyQqY="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="app">
+      <main class="mainContent">
+        <div class="logo">
+          <span class="initial">MS</span><br /><span class="title">photo</span>
+        </div>
+        <div class="call-to-action"></div>
+        <div class="resume">
+          <h1 class="hidden">Marat Safin</h1>
+          <h2 class="hidden">Photographer</h2>
+          <p class="intro">
+            I've been taking pictures since 2006. Since then, <br />
+            i have had many changes in my phototechnique.<br />
+            From Sonia's soap sish to nicon's digital mirror<br />
+            cameras; The processing of photographs has<br />
+            changed: in color, in saturation, in contrast,<br />
+            in tinting; the actual process of photography<br />
+            has changed: the vision of light, the color,<br />
+            the internal settings.
+          </p>
+        </div>
+        <div class="social">
+          <ul>
+            <li>
+              <img src="./assets/img/instagram.svg" alt="" />
+            </li>
+            <li><img src="./assets/img/twitter.svg" alt="" /></li>
+            <li><img src="./assets/img/facebook.svg" alt="" /></li>
+          </ul>
+        </div>
+      </main>
+      <div class="hero distortion"></div>
+      <nav class="navigation">
+        <ul>
+          <li>Main</li>
+          <li>Portfolio</li>
+          <li>Courses</li>
+          <li>TPS</li>
+          <li>About me</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="./assets/js/hover-effect.js"></script>
+    <script>
+      new hoverEffect({
+        parent: document.querySelector(".distortion"),
+        intensity: 0.1,
+        image1: "./assets/img/portrait-1.webp",
+        image2: "./assets/img/portrait-2.webp",
+        displacementImage: "./assets/img/distortion-3.ppm",
+        imagesRatio: 19 / 15,
+        height: 100,
+        width: 100,
+      });
+
+      // NAVBAR
+      TweenMax.staggerFrom(
+        ".navigation",
+        1.5,
+        {
+          delay: 1.5,
+          opacity: 0,
+          y: "-20",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      // MEDIA
+      TweenMax.staggerFrom(
+        ".media ul li",
+        1.5,
+        {
+          delay: 1.5,
+          opacity: 0,
+          x: "-20",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      // TEXT
+      TweenMax.from(".mainContent h1", 1.5, {
+        delay: 1,
+        y: "100%",
+        ease: Expo.easeInOut,
+        autoAlpha: 0,
+      });
+
+      TweenMax.from(".mainContent h2", 1.5, {
+        delay: 1.5,
+        opacity: 0,
+        y: "-20",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".mainContent .intro", 1.5, {
+        delay: 1.3,
+        y: "100%",
+        ease: Expo.easeInOut,
+        autoAlpha: 0,
+      });
+
+      // Logo
+      TweenMax.from(".logo", 1.5, {
+        delay: 1.5,
+        opacity: 0,
+        y: "20",
+        ease: Expo.easeInOut,
+      });
+
+      // DISTORTION
+      TweenMax.from(".hero", 1.5, {
+        delay: 2,
+        opacity: 0,
+        y: "20",
+        ease: Expo.easeInOut,
+      });
+
+      //Menu
+    </script>
+  </body>
+</html>

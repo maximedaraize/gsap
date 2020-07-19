@@ -1,0 +1,142 @@
+:root {
+  --bg-color: #f1f5e3;
+  --margin-body: 2.4rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
+  overflow-y: hidden;
+  font-family: "Catamaran", sans-serif;
+  text-transform: uppercase;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 80px;
+  max-height: 100vh;
+}
+
+.mainContent {
+  padding: 2rem;
+  height: 100%;
+}
+
+.logo {
+  height: 10%;
+}
+
+.call-to-action {
+  height: 20%;
+}
+
+.resume {
+  height: 60%;
+}
+.social {
+  margin-top: auto;
+  height: 20px;
+}
+
+.mainContent,
+.hero {
+  max-height: 100vh;
+}
+
+.hero canvas {
+  filter: grayscale(100%);
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navigation ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navigation ul li {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.navigation ul li:last-child {
+  padding: 0;
+}
+
+.social ul {
+  display: flex;
+  width: 100%;
+}
+
+.social ul li {
+  padding: 0 1rem;
+}
+
+.social ul li:first-child {
+  padding-left: 0;
+}
+
+.social img {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  line-height: 0.8;
+  transform: translate(-4px);
+  margin-bottom: 10px;
+}
+
+h1::first-letter {
+  width: 0;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-bottom: 0;
+  line-height: 0.8;
+  margin-bottom: 3rem;
+}
+
+p {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+.initial {
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.title {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: -0.3rem;
+  letter-spacing: 0.8px;
+}
