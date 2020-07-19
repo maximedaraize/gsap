@@ -1,6 +1,6 @@
 # gsap
 
-[Demo](max-gsap-01)
+[Demo](https://max-gsap-01.netlify.app/)
 
 Trying stuff around with gsap and three.js
 
